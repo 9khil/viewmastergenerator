@@ -8,16 +8,104 @@
     .reelImagesContainer {
       position: relative;
       > div {
-        height: 40px;
-        width: 50px;
+        height: 34px;
+        width: 38px;
         position: absolute;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
+
         background-color: red;
+        opacity: 0.4;
+        border-radius: 6px;
+
         &.reel-1 {
-          top: 150px;
-          left: 0;
+          top: 133px;
+          &.left {
+            left: 27px;
+          }
+
+          &.right {
+            right: 27px;
+          }
+        }
+
+        &.reel-2 {
+          transform: rotate(206deg);
+          &.left {
+            top: 88px;
+            left: 37px;
+          }
+
+          &.right {
+            top: 179px;
+            right: 37px;
+          }
+        }
+
+        &.reel-3 {
+          transform: rotate(52deg);
+          &.left {
+            top: 52px;
+            left: 66px;
+          }
+
+          &.right {
+            top: 214px;
+            right: 66px;
+          }
+        }
+
+        &.reel-4 {
+          transform: rotate(258deg);
+          &.left {
+            top: 32px;
+            left: 108px;
+          }
+
+          &.right {
+            top: 235px;
+            right: 108px;
+          }
+        }
+
+        &.reel-5 {
+          transform: rotate(103deg);
+          &.left {
+            top: 32px;
+            left: 154px;
+          }
+
+          &.right {
+            top: 234px;
+            right: 154px;
+          }
+        }
+
+        &.reel-6 {
+          transform: rotate(309deg);
+          &.left {
+            top: 52px;
+            left: 196px;
+          }
+
+          &.right {
+            top: 215px;
+            right: 196px;
+          }
+        }
+
+        &.reel-7 {
+          transform: rotate(154deg);
+          &.left {
+            top: 88px;
+            left: 225px;
+          }
+
+          &.right {
+            top: 178px;
+            right: 225px;
+          }
         }
       }
     }

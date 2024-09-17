@@ -23,8 +23,6 @@ export default function Upload() {
           id="file"
           onChange={loadFile}
         />
-
-        {/* <img id="output" width="200" /> */}
       </div>
     </div>
   );
