@@ -11,11 +11,11 @@ function Reel() {
       return (
         <>
           <div
-            className={`${styles[`reel-${index + 1}`]} ${styles.left}`}
+            className={`${styles[`slide-${index + 1}`]} ${styles.left}`}
             style={{ backgroundImage: `url(${image})` }}
           ></div>
           <div
-            className={`${styles[`reel-${index + 1}`]} ${styles.right}`}
+            className={`${styles[`slide-${index + 1}`]} ${styles.right}`}
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         </>
