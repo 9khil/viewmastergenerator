@@ -1,6 +1,20 @@
 .reelContainer {
-  img {
-    width: 300px;
+  .reel {
     height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .reelImagesContainer {
+      position: relative;
+      img {
+        height: 40px;
+        position: absolute;
+      }
+      .reel-1 {
+        top: 150px;
+        left: 0;
+      }
+    }
   }
 }
