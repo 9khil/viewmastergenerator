@@ -13,7 +13,7 @@ export default function Upload() {
   };
 
   return (
-    <div>
+    <div className="upload">
       <div>
         <hr />
         <p>
