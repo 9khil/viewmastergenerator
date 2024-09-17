@@ -16,13 +16,19 @@ export default function Upload() {
   return (
     <div>
       <div>
-        <input
-          type="file"
-          accept="image/*"
-          name="image"
-          id="file"
-          onChange={loadFile}
-        />
+        <hr />
+        <p>
+          Select <strong>7</strong> photos, one at a time.
+        </p>
+        <div>
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="file"
+            onChange={loadFile}
+          />
+        </div>
       </div>
     </div>
   );

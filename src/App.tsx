@@ -8,7 +8,6 @@ function App() {
     <>
       <Reel />
       <Upload />
-      <Thumbs />
     </>
   );
 }
