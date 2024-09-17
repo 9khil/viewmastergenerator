@@ -1,4 +1,3 @@
-import React from "react";
 import reelUrl from "/reel.png";
 import styles from "./Reel.module.scss";
 import { useViewMasterStore } from "../../store";

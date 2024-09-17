@@ -1,4 +1,3 @@
-import React from "react";
 import { useViewMasterStore } from "../../store";
 import styles from "./Thumbs.module.scss";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { useViewMasterStore } from "../../store";
 
 export default function Upload() {

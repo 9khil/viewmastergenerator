@@ -1,6 +1,11 @@
 import { create } from "zustand";
 
-export const useViewMasterStore = create((set) => ({
+interface ViewMasterStore {
+  images: string[];
+  setImages: (images: string[]) => void;
+}
+
+export const useViewMasterStore = create<ViewMasterStore>((set) => ({
   images: [],
 
   setImages: (images: string[]) => {
