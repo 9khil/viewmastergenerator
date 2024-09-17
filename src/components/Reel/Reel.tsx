@@ -8,7 +8,12 @@ function Reel() {
 
   const renderImages = () => {
     return images.map((image: string, index: number) => {
-      return <img className={`reel-${index + 1}`} src={image} />;
+      return (
+        <div
+          className={styles[`reel-${index + 1}`]}
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      );
     });
   };
 

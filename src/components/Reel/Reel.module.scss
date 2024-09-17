@@ -7,13 +7,18 @@
 
     .reelImagesContainer {
       position: relative;
-      img {
+      > div {
         height: 40px;
+        width: 50px;
         position: absolute;
-      }
-      .reel-1 {
-        top: 150px;
-        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: red;
+        &.reel-1 {
+          top: 150px;
+          left: 0;
+        }
       }
     }
   }
