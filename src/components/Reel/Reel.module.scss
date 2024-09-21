@@ -1,109 +1,110 @@
 .reelContainer {
   .reel {
-    height: 300px;
-    width: 300px;
+    height: 355px;
+    width: 355px;
     background-size: cover;
     background-repeat: no-repeat;
 
     .reelImagesContainer {
       position: relative;
       > div {
-        height: 34px;
-        width: 38px;
+        height: 39px;
+        width: 43px;
         position: absolute;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-
         background-color: rgb(31, 207, 31);
         border-radius: 6px;
 
         &.slide-1 {
-          top: 133px;
+          top: 158px;
           &.left {
-            left: 27px;
+            left: 33px;
           }
 
           &.right {
-            right: 27px;
+            right: 33px;
           }
         }
 
         &.slide-2 {
           transform: rotate(206deg);
           &.left {
-            top: 88px;
-            left: 37px;
+            top: 105px;
+            left: 45px;
           }
 
           &.right {
-            top: 179px;
-            right: 37px;
+            top: 211px;
+            right: 45px;
           }
         }
 
         &.slide-3 {
           transform: rotate(52deg);
           &.left {
-            top: 52px;
-            left: 66px;
+            top: 62px;
+            left: 79px;
           }
 
           &.right {
-            top: 214px;
-            right: 66px;
+            top: 255px;
+            right: 79px;
           }
         }
 
         &.slide-4 {
-          transform: rotate(258deg);
           &.left {
-            top: 32px;
-            left: 108px;
+            transform: rotate(258deg);
+            top: 38px;
+            left: 129px;
           }
 
           &.right {
-            top: 235px;
-            right: 108px;
+            transform: rotate(257deg);
+            top: 278px;
+            right: 128px;
           }
         }
 
         &.slide-5 {
-          transform: rotate(103deg);
           &.left {
-            top: 32px;
-            left: 154px;
+            transform: rotate(103deg);
+            top: 39px;
+            left: 184px;
           }
 
           &.right {
-            top: 234px;
-            right: 154px;
+            transform: rotate(104deg);
+            top: 278px;
+            right: 183px;
           }
         }
 
         &.slide-6 {
           transform: rotate(309deg);
           &.left {
-            top: 52px;
-            left: 196px;
+            top: 62px;
+            left: 233px;
           }
 
           &.right {
-            top: 215px;
-            right: 196px;
+            top: 255px;
+            right: 233px;
           }
         }
 
         &.slide-7 {
           transform: rotate(154deg);
           &.left {
-            top: 88px;
-            left: 225px;
+            top: 105px;
+            left: 267px;
           }
 
           &.right {
-            top: 178px;
-            right: 225px;
+            top: 211px;
+            right: 268px;
           }
         }
       }
