@@ -1,14 +1,17 @@
 .reelContainer {
+  .calibrationDiskSwitchContainer {
+    margin-bottom: 20px;
+  }
   .reel {
-    height: 355px;
-    width: 355px;
+    height: 354px;
+    width: 354px;
     background-size: cover;
     background-repeat: no-repeat;
 
     .reelImagesContainer {
       position: relative;
       > div {
-        height: 39px;
+        height: 38px;
         width: 43px;
         position: absolute;
         background-size: cover;
@@ -16,6 +19,11 @@
         background-position: 50% 50%;
         background-color: rgb(31, 207, 31);
         border-radius: 6px;
+
+        > span {
+          font-weight: bold;
+          line-height: 38px;
+        }
 
         &.slide-1 {
           top: 158px;
@@ -38,6 +46,7 @@
           &.right {
             top: 211px;
             right: 45px;
+            height: 39px;
           }
         }
 
@@ -49,16 +58,17 @@
           }
 
           &.right {
-            top: 255px;
+            top: 254px;
             right: 79px;
           }
         }
 
         &.slide-4 {
           &.left {
-            transform: rotate(258deg);
+            transform: rotate(257deg);
             top: 38px;
             left: 129px;
+            height: 39px;
           }
 
           &.right {
@@ -72,13 +82,14 @@
           &.left {
             transform: rotate(103deg);
             top: 39px;
-            left: 184px;
+            left: 183px;
           }
 
           &.right {
-            transform: rotate(104deg);
-            top: 278px;
+            transform: rotate(103deg);
+            top: 277px;
             right: 183px;
+            height: 39px;
           }
         }
 
@@ -86,12 +97,14 @@
           transform: rotate(309deg);
           &.left {
             top: 62px;
-            left: 233px;
+            left: 232px;
+            height: 39px;
           }
 
           &.right {
-            top: 255px;
-            right: 233px;
+            top: 254px;
+            right: 232px;
+            height: 39px;
           }
         }
 
@@ -99,15 +112,80 @@
           transform: rotate(154deg);
           &.left {
             top: 105px;
-            left: 267px;
+            left: 266px;
           }
 
           &.right {
+            height: 39px;
             top: 211px;
-            right: 268px;
+            right: 267px;
           }
         }
       }
     }
+  }
+
+  /*****
+  Slider toggle
+  *****/
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
   }
 }

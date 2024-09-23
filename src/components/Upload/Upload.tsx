@@ -1,4 +1,5 @@
 import { useViewMasterStore } from "../../store";
+import styles from "./Upload.module.scss";
 
 export default function Upload() {
   const { images, setImages } = useViewMasterStore();
@@ -13,11 +14,11 @@ export default function Upload() {
   };
 
   return (
-    <div className="upload">
+    <div className={styles.upload}>
       <div>
         <hr />
         <p>
-          Select <strong>7</strong> photos, one at a time.
+          Select <strong>7</strong> photos, one at a time (sorry)
         </p>
         <div>
           <input
