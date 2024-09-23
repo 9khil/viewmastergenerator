@@ -7,7 +7,8 @@ import Button from "../Button/Button";
 function Reel() {
   const [debugMode, setDebugMode] = useState(false);
   const [reelRotation, setReelRotation] = useState(0);
-  const { calibrationReelColors, images } = useViewMasterStore();
+  const { calibrationReelNumbers, calibrationReelColors, images } =
+    useViewMasterStore();
 
   const rotateReel = () => {
     if (reelRotation >= 334) {
@@ -44,13 +45,13 @@ function Reel() {
             className={`${styles[`slide-${i + 1}`]} ${styles.left}`}
             style={{ backgroundColor: `${calibrationReelColors[i]}` }}
           >
-            <span>{i + 1}</span>
+            <span>{calibrationReelNumbers[i]}</span>
           </div>
           <div
             className={`${styles[`slide-${i + 1}`]} ${styles.right}`}
             style={{ backgroundColor: `${calibrationReelColors[i]}` }}
           >
-            <span>{i + 1}</span>
+            <span>{calibrationReelNumbers[i]}</span>
           </div>
         </>
       );

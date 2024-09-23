@@ -16,6 +16,7 @@ export const useViewMasterStore = create<ViewMasterStore>((set) => ({
     "purple",
     "pink",
   ],
+  calibrationReelNumbers: ["1", "4", "7", "3", "6", "2", "5"],
   images: [],
 
   setImages: (images: string[]) => {
