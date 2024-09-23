@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 interface ViewMasterStore {
   calibrationReelColors: string[];
+  calibrationReelNumbers: string[];
   images: string[];
   setImages: (images: string[]) => void;
 }
