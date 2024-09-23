@@ -189,3 +189,10 @@
     border-radius: 50%;
   }
 }
+
+@media print {
+  .calibrationDiskSwitchContainer,
+  .buttons {
+    display: none;
+  }
+}

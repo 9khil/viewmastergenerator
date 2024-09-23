@@ -84,7 +84,7 @@ function Reel() {
         <div className={styles.reelImagesContainer}>{renderImages()}</div>
       </div>
 
-      <div>
+      <div className={styles.buttons}>
         <Button onClick={rotateReel} text="Rotate reel" />
         <Button onClick={() => setReelRotation(1 - 1)} text="Reset rotation" />
       </div>
