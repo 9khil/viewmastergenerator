@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 function Reel() {
   const [debugMode, setDebugMode] = useState(false);
   const [reelRotation, setReelRotation] = useState(0);
-  const { calibrationReelNumbers, calibrationReelColors, images } =
+  const { calibrationReelNumbers, calibrationReelColors, images, is3DReel } =
     useViewMasterStore();
 
   const rotateReel = () => {
@@ -19,7 +19,7 @@ function Reel() {
   };
 
   const renderImages = () => {
-    if (!debugMode) {
+    if (!debugMode && !is3DReel) {
       return images.map((image: string, index: number) => {
         return (
           <>
@@ -34,6 +34,32 @@ function Reel() {
           </>
         );
       });
+    }
+
+    if (!debugMode && is3DReel) {
+      const reelContent = [];
+      let reelIndex = 0;
+      for (let i = 0; i < images.length; i++) {
+        if (i % 2 == 0) {
+          reelContent.push(
+            <>
+              <div
+                className={`${styles[`slide-${reelIndex + 1}`]} ${styles.left}`}
+                style={{ backgroundImage: `url(${images[i]})` }}
+              ></div>
+              <div
+                className={`${styles[`slide-${reelIndex + 1}`]} ${
+                  styles.right
+                }`}
+                style={{ backgroundImage: `url(${images[i + 1]})` }}
+              ></div>
+            </>
+          );
+          reelIndex++;
+        }
+      }
+
+      return reelContent;
     }
 
     //Debug mode
@@ -74,7 +100,7 @@ function Reel() {
             />
             <span className={`${styles.slider} ${styles.round}`}></span>
           </label>
-          <div>Calibration disk</div>
+          <div>Calibration disc</div>
         </div>
       </div>
 
