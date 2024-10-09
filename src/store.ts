@@ -4,6 +4,7 @@ interface ViewMasterStore {
   calibrationReelColors: string[];
   calibrationReelNumbers: string[];
   is3DReel: boolean;
+  setIs3DReel: (is3DReel: boolean) => void;
   images: string[];
   setImages: (images: string[]) => void;
 }
