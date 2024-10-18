@@ -13,7 +13,7 @@ export default function Upload() {
       // For non-3D reel, allow multiple image uploads
       const newImageArray = [
         ...images,
-        ...Array.from(files).map(file => URL.createObjectURL(file)),
+        ...Array.from(files).map(file => URL.createObjectURL(file as File)),
       ];
 
       setImages(newImageArray);
